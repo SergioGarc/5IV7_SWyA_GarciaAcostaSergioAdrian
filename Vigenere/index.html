@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo Viggener</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        function mostrarpanel2(){
+            document.getElementById("div1").style.display = "none";
+            document.getElementById("div2").style.display = "grid";
+            document.getElementById("div3").style.display = "none";
+        }
+        function mostrarpanel3(){
+            document.getElementById("div1").style.display = "none";
+            document.getElementById("div2").style.display = "none";
+            document.getElementById("div3").style.display = "grid";
+        }
+    </script>
+</head>
+<body>
+    <header class="header">
+        <div class="cabecera logo-container">
+            viggenere
+            <nav class="navigation">
+                <ul>
+                    <li><button><a href="index.html"><div class="textos">Inicio</div></a></button></li>
+                    <li><button onclick="mostrarpanel2()"><div class="textos">Cifrar</div></button></li>
+                    <li><button onclick="mostrarpanel3()"><div class="textos">Descifrar</div></button></li>
+                </ul>    
+            </nav>
+        </div>
+    </header> 
+    <section class="main">
+        <br>
+        <div class="maincontainer2" id="div1">
+            <br>
+            <div class="Cifrar" onclick="mostrarpanel2()">
+                Cifrar
+            </div>
+            <br>
+            <br>
+            <div class="Cifrar" onclick="mostrarpanel3()">
+                Descifrar
+            </div>
+        </div>
+        <div class="maincontainer3" id="div2">
+            <br>
+            <center><h3>Ingrese el Texto Para Cifrar</h3></center>
+            <br>
+            <textarea id="cadena" cols="30" rows="10" maxlength="100" class="texto" ></textarea>
+            <br>
+            <center><h3>Ingrese la llave que desea que tenga el crifrado</h3></center>
+            <br>
+            <input id="llave" class="des" >
+            <br>
+            <p><input type="button" value="Cifrar" id="ci" class="Cifrar"></p>
+            <div id="resultado" class="resultado">
+                
+            </div>
+        </div>
+        <div class="maincontainer4" id="div3">
+            <br>
+            <center><h3>Ingrese el Texto Para Descifrar</h3></center>
+            <br>
+            <textarea id="cadena1" cols="30" rows="10" maxlength="100" class="texto"></textarea>
+            <br>
+            <center><h3>Ingrese la llave que desea que tenga el crifrado</h3></center>
+            <br>
+            <input id="llave1" class="des" >
+            <br>
+            <p><input type="button" value="Descifrar" id="de" class="Cifrar"></p>
+            <div id="resultado1" class="resultado" >
+                
+            </div>
+        </div>
+    </section>
+    
+    
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/viggenere.js" ></script>
+</body>
+</html>
